@@ -2,8 +2,11 @@ $(window).on("load", function () {
   $("body").removeClass("overflow");
 });
 $(document).ready(function () {
-  /************************************ Main Slider ************************************/
-  if ($(window).width() <= 1199) {
+  sal({
+    once: true,
+  });
+  /************************************ Side Menu ************************************/
+  if ($(window).width() <= 767) {
     $(".menu-btn").on("click", () => {
       $(".menu-overlay").fadeIn(500);
       $(".header-nav").addClass("active");
