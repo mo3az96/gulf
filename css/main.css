@@ -1035,7 +1035,15 @@ header {
   }
   .header-nav .nav-list a.header-btn {
     height: 40px;
+    margin: 0 auto;
     justify-content: center;
+    width: 200px;
+  }
+  .header-nav .nav-list a.lang {
+    color: #808080;
+  }
+  .header-nav .nav-list a.lang:hover {
+    color: #eb0874;
   }
   .header-nav .nav-list a:hover {
     color: #eb0874;
@@ -1057,10 +1065,10 @@ header {
     display: none;
   }
   .header-nav .nav-sublist li {
-    padding: 15px 0 0;
+    padding: 10px 0 0;
   }
   .header-nav .nav-sublist li ~ li {
-    margin: 5px 0 0;
+    margin: 0 0;
   }
   .header-nav .nav-sublist li a {
     font-size: 16px;
