@@ -250,9 +250,23 @@ button {
   right: auto;
   left: 60px;
 }
+html[dir=ltr] .main-slider .swiper-btn.swiper-button-next {
+  right: 60px;
+  left: auto;
+}
+html[dir=ltr] .main-slider .swiper-btn.swiper-button-next i {
+  transform: scaleX(-1);
+}
 .main-slider .swiper-btn.swiper-button-prev {
   left: auto;
   right: 60px;
+}
+html[dir=ltr] .main-slider .swiper-btn.swiper-button-prev {
+  right: auto;
+  left: 60px;
+}
+html[dir=ltr] .main-slider .swiper-btn.swiper-button-prev i {
+  transform: scaleX(-1);
 }
 .main-slider .swiper-btn:hover {
   color: #eb0874;
@@ -1384,9 +1398,23 @@ header {
   right: auto;
   left: 20px;
 }
+html[dir=ltr] .product-imgs-content .product-imgs .swiper-btn.swiper-button-next {
+  right: 20px;
+  left: auto;
+}
+html[dir=ltr] .product-imgs-content .product-imgs .swiper-btn.swiper-button-next i {
+  transform: scaleX(-1);
+}
 .product-imgs-content .product-imgs .swiper-btn.swiper-button-prev {
   left: auto;
   right: 20px;
+}
+html[dir=ltr] .product-imgs-content .product-imgs .swiper-btn.swiper-button-prev {
+  right: auto;
+  left: 20px;
+}
+html[dir=ltr] .product-imgs-content .product-imgs .swiper-btn.swiper-button-prev i {
+  transform: scaleX(-1);
 }
 .product-imgs-content .product-imgs .swiper-btn:hover {
   color: #eb0874;
