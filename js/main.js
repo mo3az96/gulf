@@ -105,6 +105,31 @@ $(document).ready(function () {
       clickable: true,
     },
   });
+  var relatedSwiper = new Swiper(".related-slider .swiper", {
+    loop: true,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      767: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+      },
+      1199: {
+        slidesPerView: 3,
+        spaceBetween: 29,
+      },
+    },
+    pagination: {
+      el: ".related-slider .swiper-pagination",
+      clickable: true,
+    },
+  });
   /************************************ Products Sliders ************************************/
   var partnerSwiper = new Swiper(".partners-slider .swiper", {
     loop: true,
@@ -149,5 +174,53 @@ $(document).ready(function () {
       },
       1000
     );
+  });
+
+  /************************************ Product Imgs ************************************/
+  var productThumbs = new Swiper(".product-thumbs", {
+    // loop: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+      0: {
+        spaceBetween: 4,
+        slidesPerView: 3,
+      },
+      767: {
+        spaceBetween: 4,
+        slidesPerView: 4,
+      },
+      992: {
+        spaceBetween: 4,
+        slidesPerView: 3,
+      },
+      1199: {
+        spaceBetween: 4,
+        slidesPerView: 4,
+      },
+    },
+  });
+
+  var productImgs = new Swiper(".product-imgs .swiper", {
+    spaceBetween: 15,
+    // loop: true,
+    thumbs: {
+      swiper: productThumbs,
+    },
+    navigation: {
+      nextEl: ".product-imgs .swiper-button-next",
+      prevEl: ".product-imgs .swiper-button-prev",
+    },
+  });
+
+  /************************************ Accordion ************************************/
+  $(".accordion-head").click(function () {
+    $(".accordion-head").not(this).removeClass("active");
+    if ($(this).siblings().css("display") == "none") {
+      $(this).addClass("active").siblings().slideDown(500);
+    } else {
+      $(this).removeClass("active").siblings().slideUp(500);
+    }
+    $(".accordion-head").not(this).siblings().slideUp(500);
   });
 });
